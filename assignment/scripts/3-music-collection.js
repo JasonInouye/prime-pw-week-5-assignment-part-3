@@ -43,3 +43,26 @@ function showCollection( array ){
 }// End showCollection
 
 console.log( showCollection( collection ) );
+
+// Create findByArtist funciton
+function findByArtist( artist ){
+    console.log( `inside findByArtist function` );
+    let results = [];
+    for (var i = 0; i < collection.length; i++) {
+        console.log( collection[i].artist );
+        if ( artist === collection[i].artist  ) {
+            console.log( `inside IF statement`, collection[i].artist );
+
+            let albumResult ={
+                title: collection[i].title,
+                artist: collection[i].artist,
+                yearPublished: collection[i].yearPublished
+            };   // end albumResult
+            results.push( albumResult );
+
+        } // End of If
+    } // End of For Loop
+    return results;
+} // End findByArtist
+
+findByArtist( `Prince` );
