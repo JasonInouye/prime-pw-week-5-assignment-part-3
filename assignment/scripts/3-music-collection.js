@@ -51,7 +51,7 @@ function findByArtist( artist ){
     for (var i = 0; i < collection.length; i++) {
         console.log( collection[i].artist );
         if ( artist === collection[i].artist  ) {
-            console.log( `inside IF statement`, collection[i].artist );
+            // console.log( `inside IF statement`, collection[i].artist );
 
             let albumResult ={
                 title: collection[i].title,
@@ -65,4 +65,6 @@ function findByArtist( artist ){
     return results;
 } // End findByArtist
 
-findByArtist( `Prince` );
+console.log( findByArtist( `Adele` ) );
+// test of non existing artist
+console.log( findByArtist( `The Beatles` ) );
