@@ -68,3 +68,12 @@ function findByArtist( artist ){
 console.log( findByArtist( `Adele` ) );
 // test of non existing artist
 console.log( findByArtist( `The Beatles` ) );
+
+// STRETCH GOALS
+// Create search funciton
+
+function search( artist, year){
+    console.log( `inside of search function` );
+}
+
+search( `Prince`, `1984` );
