@@ -13,17 +13,17 @@ let album0 ={
 */
 
 function addToCollection(title, artist, yearPublished){
-    var albumName = title;
-    console.log( `The album name is `, albumName );
-    var albumName ={
+    //let albumName = (`album`+collection.length);
+    //console.log( `The album name is `, albumName );
+    let album ={
         title: title,
         artist: artist,
         yearPublished: yearPublished
-    }   // end albumName
-    console.log( `The album name to be pushed is`, title );
-    collection.push( title );
+    };   // end album
+    //console.log( `The album name to be pushed is`, album );
+    collection.push( album );
     //console.log( collection );
-    return albumName;
+    return album;
 } // End addToCollection
 
 console.log( addToCollection(`The Essential Bob Dylan`, `Bob Dylan`, `2016`) );
@@ -31,4 +31,10 @@ console.log( addToCollection(`Legend the best of Bob Marley`, `Bob Marley`, `198
 console.log( addToCollection(`Purple Rain`, `Prince`, `1984`) );
 console.log( addToCollection(`21`, `Adele`, `2011`) );
 console.log( addToCollection(`25`, `Adele`, `2015`) );
-console.log( addToCollection(`From a Room Vol.1 and Vol.2`, `Chris Stapleton`, `2017`) );
+console.log( addToCollection(`Traveller`, `Chris Stapleton`, `2015`) );
+
+// Create showCollection function
+// log the number of items in the array
+function showCollection( arr ){
+    console.log( collection.length );
+}// End showCollection
