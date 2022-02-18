@@ -35,6 +35,11 @@ console.log( addToCollection(`Traveller`, `Chris Stapleton`, `2015`) );
 
 // Create showCollection function
 // log the number of items in the array
-function showCollection( arr ){
+function showCollection( array ){
     console.log( collection.length );
+    for (let i = 0; i < array.length; i++) {
+        console.log( `${array[i].title} by ${array[i].artist} published in ${array[i].yearPublished}` );
+    }
 }// End showCollection
+
+console.log( showCollection( collection ) );
