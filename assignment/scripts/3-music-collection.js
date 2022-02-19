@@ -72,9 +72,16 @@ console.log( findByArtist( `Adele` ) );
 // STRETCH GOALS
 // Create search funciton
 
-function search( artist, year){
+function search( artist, year ){
     console.log( `inside of search function` );
+    //console.log( `artist is:`, artist);
+    //console.log( `year is:`, year);
     let searchResults = [];
+    if ( artist === undefined && year === undefined ) {
+        console.log( `The parameters are empty here is the entire collection` );
+        console.log( collection );
+    }
+    else {
     for (var i = 0; i < collection.length; i++) {
         console.log( collection[i].artist, collection[i].yearPublished );
         if ( artist === collection[i].artist && year === collection[i].yearPublished  ) {
@@ -86,10 +93,17 @@ function search( artist, year){
                 yearPublished: collection[i].yearPublished
             };   // end albumResult
             searchResults.push( albumSearchResult );
-
         } // End of If
     } // End of For Loop
-    return searchResults;
-}
+    // return searchResults;
+    }
+} // End Search
 
+// test search function
 console.log( search( `Prince`, `1984` ) );
+
+// test no results search function
+console.log( search( `Prince`, `2006` ) );
+
+// test no parameters
+console.log( search() );
