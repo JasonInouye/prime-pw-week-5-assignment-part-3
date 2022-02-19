@@ -67,13 +67,29 @@ function findByArtist( artist ){
 
 console.log( findByArtist( `Adele` ) );
 // test of non existing artist
-console.log( findByArtist( `The Beatles` ) );
+// console.log( findByArtist( `The Beatles` ) );
 
 // STRETCH GOALS
 // Create search funciton
 
 function search( artist, year){
     console.log( `inside of search function` );
+    let searchResults = [];
+    for (var i = 0; i < collection.length; i++) {
+        console.log( collection[i].artist, collection[i].yearPublished );
+        if ( artist === collection[i].artist && year === collection[i].yearPublished  ) {
+            // console.log( `inside IF statement`, collection[i].artist );
+            console.log( `inside if search` );
+            let albumSearchResult ={
+                title: collection[i].title,
+                artist: collection[i].artist,
+                yearPublished: collection[i].yearPublished
+            };   // end albumResult
+            searchResults.push( albumSearchResult );
+
+        } // End of If
+    } // End of For Loop
+    return searchResults;
 }
 
-search( `Prince`, `1984` );
+console.log( search( `Prince`, `1984` ) );
