@@ -11,6 +11,44 @@ let album0 ={
     yearPublished:'1996'
 }   // end album
 */
+// Failed attemp to add tracks
+// unable to get if statement on line 31 to work (check if track exists)
+// function addToCollection(title, artist, yearPublished, [song, duration]){
+//     for (var i = 0; i < collection.length; i++) {
+//         if (collection.filter( i => i.title === title).length > 0) {
+//             console.log( `inside filter IF statment`);
+//             console.log( `the title filter is :`, collection.filter( i => i.title === title));
+//             console.log( `The song filter is:`, collection.filter( i => i.tracks === song));
+//             console.log( `the the title is :`, ( i => i.title === title).length);
+//             console.log( `the the track is :`, ( i => i.tracks === song).length);
+//             console.log( `The track names are:`, collection[i].tracks);
+//                 for (var j = 0; j < collection[i].tracks.length; j++) {
+//                     console.log( `j value`, j);
+//                     console.log( `Track name again`, collection[i].tracks);
+//                     console.log( `Filter Results:`, collection.filter( j => collection[i].tracks[j] === song));
+//                     //if ( song !== collection[i].tracks[j].song ) {
+//                     //if (collection.tracks.filter( j => i.collection.tracks === song).length > 0) {
+//                     if (collection.filter( j => collection[i].tracks === song).length > 0) {
+//                         console.log( `The song is:`, song);
+//                         console.log( `The song filter is:`, collection.filter( j => j.tracks === song));
+//                         console.log( `The song is:`, j => j.tracks );
+//                         console.log( `What is i:`, j);
+//                         console.log( `Length of song`, ( j => j.tracks === song).length );
+//                         console.log( `Song does exist, adding new song to colleciton` );
+//                         // let tracks = {
+//                         // tracks: song,
+//                         // duration: duration
+//                         // }
+//                     //collection[i].tracks.push( tracks );
+//                     } // End if
+//                 } // End for loop on tracks
+//             return true;
+//         }
+//         else {
+//             console.log( `inside filter else statment`);
+//             return false;
+//         }
+
 
 function addToCollection(title, artist, yearPublished){
     //let albumName = (`album`+collection.length);
